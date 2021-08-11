@@ -1,5 +1,10 @@
 :host {
+    flex: 1 1 auto;
+}
+
+.container {
     display: flex;
     flex-flow: column;
     height: 100%;
+    justify-content: center;
 }
