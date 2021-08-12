@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Pagination } from '../models/pagination.model';
 import { PaginationRequest } from '../models/pagination.request.model';
+import { UsersPagination } from '../models/users-pagination.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,8 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  public getPageableUsers(paginationRequest: PaginationRequest): Observable<Pagination> {
-    return this.http.post<Pagination>(this.USERSPAGEDENDPOINT, paginationRequest);
+  public getPageableUsers(paginationRequest: PaginationRequest): Observable<UsersPagination> {
+    return this.http.post<UsersPagination>(this.USERSPAGEDENDPOINT, paginationRequest);
   }
 
 }

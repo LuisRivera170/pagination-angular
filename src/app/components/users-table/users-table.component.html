@@ -1,0 +1,28 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Username</th>
+                <th scope="col">Phone #</th>
+                <th scope="col">Cell #</th>
+                <th scope="col">Birth Day</th>
+                <th scope="col">Blood group</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.phoneNumber}}</td>
+                <td>{{user.cellPhoneNumber}}</td>
+                <td>{{user.birthDay | date}}</td>
+                <td>{{user.bloodGroup}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { UsersTableComponent } from './components/users-table/users-table.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     FooterComponent,
     HomeComponent,
     HomeContentComponent,
-    PaginationComponent
+    PaginationComponent,
+    UsersTableComponent
   ],
   imports: [
     BrowserModule,
