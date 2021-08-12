@@ -30,16 +30,16 @@ export class PaginationComponent implements OnInit {
     }
   }
 
-  private calculatePagination(paginationObj: Pagination) {
+  private calculatePagination(paginationObj: Pagination) {    
     this.currentPage = paginationObj?.pageable?.pageNumber || 0;
     this.totalPages = paginationObj?.totalPages || 0;
-    const initialRange: number = Math.min(Math.max(0, this.currentPage - 4), this.totalPages - 5);
-    const finalRange: number = Math.max(Math.min(this.totalPages, this.currentPage + 4), 9);
-
-    this.pageNumbers = new Array(finalRange - initialRange)
-      .fill(0)
-      .map((_, index) => initialRange + index);
-
+    
+      const initialRange: number = Math.min(Math.max(0, this.currentPage - 4), this.totalPages - 5);
+      const finalRange: number = Math.max(Math.min(this.totalPages, this.currentPage + 4), 9);
+  
+      this.pageNumbers = new Array(finalRange - initialRange)
+        .fill(0)
+        .map((_, index) => initialRange + index);
   }
 
   public sendToPage(page: number): void {

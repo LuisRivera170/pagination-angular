@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
+import { PaginationInfoComponent } from './components/pagination-info/pagination-info.component';
+import { PaginationOrderComponent } from './components/pagination-order/pagination-order.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { UsersTableComponent } from './components/users-table/users-table.compon
     HomeComponent,
     HomeContentComponent,
     PaginationComponent,
-    UsersTableComponent
+    UsersTableComponent,
+    PaginationInfoComponent,
+    PaginationOrderComponent
   ],
   imports: [
     BrowserModule,

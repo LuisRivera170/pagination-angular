@@ -1,4 +1,12 @@
 <div class="row">
+    <div class="col-8">
+        <app-pagination-info [pagination]="pagination"></app-pagination-info>
+    </div>
+    <div class="col-4">
+        <app-pagination-order></app-pagination-order>
+    </div>
+</div>
+<div class="row">
     <div class="col">
         <app-users-table [users]="users"></app-users-table>
     </div>
