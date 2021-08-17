@@ -1,1 +1,12 @@
-<p>pagination-order works!</p>
+<div class="row justify-content-evenly">
+        <div>
+            Ordenar por:
+            <select class="form-select" (change)="onChangeOrder($event)">
+                <option *ngFor="let sortItem of sort" [value]="sortItem?.column">{{sortItem?.description}}</option>
+            </select>
+        </div>
+        <div>
+            <a href="javascript:void(0)" *ngIf="direction === 'ASC'" (click)="onChangeDirection('DESC')"><i-bs name="sortAlphaDown"></i-bs></a>
+            <a href="javascript:void(0)" *ngIf="direction === 'DESC'" (click)="onChangeDirection('ASC')"><i-bs name="sortAlphaUp"></i-bs></a>
+        </div>
+</div>

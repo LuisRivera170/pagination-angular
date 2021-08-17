@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+import { sortAlphaUp, sortAlphaDown } from 'ngx-bootstrap-icons';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -12,6 +15,11 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { PaginationInfoComponent } from './components/pagination-info/pagination-info.component';
 import { PaginationOrderComponent } from './components/pagination-order/pagination-order.component';
+
+const icons = {
+  sortAlphaUp,
+  sortAlphaDown
+};
 
 @NgModule({
   declarations: [
@@ -29,7 +37,8 @@ import { PaginationOrderComponent } from './components/pagination-order/paginati
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxBootstrapIconsModule.pick(icons)
   ],
   providers: [],
   bootstrap: [AppComponent]
